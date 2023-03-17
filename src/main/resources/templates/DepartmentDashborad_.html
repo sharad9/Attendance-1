@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DepartmentDashBoard</title>
+	<link rel="stylesheet" href="css/DepartmentDashboard.css" />
+
+</head>
+
+<body>
+	<center style="border: 2px solid black; background-color: rgb(56, 144, 150);">
+		<strong style="font-size: 1.5em;">Computer Scinece Enigineering</strong>
+	</center>
+
+	<div class="screen-level-1">
+		<div class="left-screen-level-1">
+
+			<button>Department View</button>
+			<button>Classes&nbsp;10</button>
+			<button onclick="javascript:window.location.href=path+'/departmentFaculties'">Faculties&nbsp;10</button>
+			<button onclick="javascript:window.location.href=path+'/departmentSubjects'">Subjects&nbsp;10</button>
+			<button onclick="javascript:window.location.href=path+'/departmentStudents'">Students&nbsp;1230</button>
+			<button onclick="javascript:window.location.href=path+'/departmentTimeTables'">Time Table</button>
+
+
+		</div>
+		<div class="right-screen-level-1">
+			<div class="top-right-screen-level-1">
+
+				<center>
+					<button style="font-weight: bolder; width: 100%;
+			padding: 0.5%;" onclick="javascript:showForm('subjectFormSection',this);">+ Add
+						Subject</button>
+					<button style="font-weight: bolder;width: 100%;
+			padding: 0.5%;" onclick="showForm('facultyFormSection',this);">+ Add
+						Faculty</button>
+					<button style="font-weight: bolder;width: 100%;
+			padding: 0.5%;" onclick="showForm('classFormSection',this);">+ Add Class</button>
+					<button style="font-weight: bolder;width: 100%;
+			padding: 0.5%;" onclick="showForm('studentFormSection',this);">+ Add
+						Student</button>
+				</center>
+			</div>
+
+
+			<div class="bottom-right-screen-level-1">
+
+
+
+				<section style=" 
+			
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; display: none; " id="subjectFormSection">
+					<div style="margin-left: 25%;">
+
+
+						<form style="border:5px solid #ccc;width: 70%; padding: 15px;" action="javascript:void(0);"
+							id="subjectForm" method="get">
+							<input name="id" type="hidden" value="-1" />
+							<center>
+								<strong>Add Subject</strong>
+							</center>
+							<div>
+								<label>Subject-Name : </label>
+
+								<input type="text" name="name" min="3" max="20" placeholder="ex. Cloud Computing" />
+								<hr>
+								<label>Subject-Code : </label>
+
+								<input type="text" name="code" min="3" max="20" placeholder="ex. KCS-201" />
+
+								<hr>
+								<section style="display: flex;justify-content: end; gap:10px;">
+									<button onclick="addSubject()"> Add </button>
+									<button onclick='javascript:window.location.href="#"'>Cancel</button>
+
+								</section>
+
+						</form>
+					</div>
+
+				</section>
+
+
+				<section style=" 
+					            display: flex;
+					            justify-content: center;
+					            align-items: center;
+					            flex-direction: row; display: none; " id="facultyFormSection">
+					<div style="margin-left: 25%;">
+
+
+						<form style="border:5px solid #ccc;width: 70%; padding: 15px;" action="javascript:void(0);"
+							id="facultyForm" method="get">
+
+							<input type="hidden" name="id" value="-1" />
+							<center>
+								<strong>Add Faculty</strong>
+							</center>
+
+							<label>Name :</label>
+
+							<input type="text" name="name" placeholder="ex. tyagimohit" />
+
+							<hr>
+
+							<section style="display: flex;justify-content: end; gap:10px;">
+								<button onclick="addFaculty()"> Add </button>
+								<button onclick='javascript:window.location.href="#"'>Cancel</button>
+
+							</section>
+
+
+
+
+						</form>
+					</div>
+
+				</section>
+
+				<section style=" 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; display: none;  " id="classFormSection">
+					<div style="margin-left: 25%;">
+
+						<form style="border:5px solid #ccc;width: 70%; padding: 15px;" action="javascript:void(0);"
+							id="classForm" method="get">
+
+							<input type="hidden" name="id" value="-1" />
+							<center>
+								<strong>Add Class</strong>
+							</center>
+
+
+							<label>Course :</label>
+
+							<input type="text" name="course" placeholder="B.Tech" />
+							<label>Branch :</label>
+
+							<input type="text" name="branch" placeholder="CSE" />
+
+							<label>Section :</label>
+
+							<input type="text" name="section" placeholder="1" />
+
+							<label>Year :</label>
+
+							<input type="text" name="year" placeholder="2022" />
+							<hr>
+							<section style="display: flex;justify-content: end; gap:10px;">
+								<button onclick="addClass()"> Add </button>
+								<button onclick='javascript:window.location.href="#"'>Cancel</button>
+
+							</section>
+
+
+
+						</form>
+					</div>
+
+				</section>
+				<section style=" 
+				            display: flex;
+				            justify-content: center;
+				            align-items: center;
+				            flex-direction: row; display: none;  " id="studentFormSection">
+					<div style="margin-left: 25%;">
+
+
+
+
+						<form style="border:5px solid #ccc;width: 70%; padding: 15px;" action="javascript:void(0);"
+							id="classForm" method="get">
+							<center>
+								<strong>Add Student</strong>
+							</center>
+							<input type="hidden" name="id" value="-1" />
+
+							<label>Name :</label>
+
+							<input type="text" name="name" placeholder="ex. Dharmik Jayesh Joshi" />
+							<hr>
+							<label>Roll no :</label>
+
+							<input type="text" name="rollno" placeholder="ex. 22" />
+
+
+
+							<hr>
+							<section style="display: flex;justify-content: end; gap:10px;">
+								<button onclick="addStudent()"> Add </button>
+								<button onclick='javascript:window.location.href="#"'>Cancel</button>
+
+
+							</section>
+
+
+						</form>
+					</div>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<hr>
+
+	<input type="hidden" th:value="${departmentId}" id="departmentId">
+	<script src="javascript/path.js"></script>
+	<script src="javascript/DepartmentDashboard.js"></script>
+	<script src="PageFunctionality/addFaculty.js"></script>
+	<script src="PageFunctionality/addSubject.js"></script>
+
+</body>
+
+</html>

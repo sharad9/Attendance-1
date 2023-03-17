@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<body>
+
+    <article>
+        <center>
+            <h1 style="color:red;">Something went wrong !!</h1>
+            <a href="/" >Go Home</a>
+       
+        <hr>
+        
+        <table class="table">
+            <tr>
+                <td>Error</td>
+                <td th:text="${error}" />
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td th:text="${status}" />
+            </tr>
+            <tr>
+                <td>Path</td>
+                <td th:text="${path}" />
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td th:text="${timestamp}" />
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td th:text="${message}" />
+            </tr>
+        </table>
+         </center>
+    </article>
+
+
+
+</body>
+
+</html>

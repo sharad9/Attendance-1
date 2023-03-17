@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Apni Attendance</title>
+
+
+	<style>
+		input[type=text]{
+			width: 100%;
+			padding: 15x;
+			margin: 5px 0 22px 0;
+			display: inline-block;
+			border-style: groove;
+		}
+
+		input[type=text]:focus{
+			background-color: #ddd;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div style=" height:500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;">
+		
+			<form action="javascript:void(0);" id="departmentForm" method="get" style="border:1px solid #ccc; padding: 5%;width:50%" >
+				<div class="control-group">
+					<label class="control-label">Name :</label>
+					<div class="controls">
+						<input type="text" name="name" class="span11" placeholder="ex. Computer Engineering" />
+					</div>
+				</div>
+			<div>
+				<button onclick="addDepartment()"> Add </button>
+				<button onclick='javascript:window.location.href="#"'>Cancel</button>
+			</div>
+			</form>
+	<input type="hidden" th:value="${adminId}" id="adminId">
+
+	</div>
+
+
+	<script src="/javascript/path.js"></script>
+	<script src="/PageFunctionality/CreateDepartment.js"></script>
+
+</body>
+
+</html>

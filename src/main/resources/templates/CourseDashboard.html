@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Attendance Management</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.7" />
+
+	<link rel="stylesheet" href="css/OrganisationDashboard.css" />
+
+	<style>
+
+	</style>
+
+</head>
+
+<body onload="onLoadPopulate()">
+
+
+
+
+
+
+
+	<div align="center">
+
+
+		<div class="screen-level-1">
+
+
+
+			<div class="nav-screen-level-1">
+				<nav style="border:1px solid gray;">
+
+					<ul style="list-style:none">
+						<li><a title="" style="text-decoration:none;" href="/"><span>Logout </span><sub
+									style='font-size:25px;'>&#10548;</sub></a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<div class="top-screen-level-1">
+				<br>
+
+				<h3> !!Welcome Admin!! </h3>
+				<hr>
+				<p style="color: blue;font-size:0.9em">
+
+					<br>
+					You can Create a Department Level Hod by filling out the registeration form..
+					These details will be forwarded to department hod via email..
+
+				</p>
+
+			</div>
+			<div class="middle-screen-level-1">
+				<table border="1">
+					<caption>
+						<H1>All Hods</H1>
+					</caption>
+					<thead>
+						<tr>
+							<th>Sr no.</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Department</th>
+							<th colspan=2>Operations</th>
+						</tr>
+					</thead>
+					<tbody id="hods">
+					</tbody>
+
+				</table>
+
+			</div>
+			<div class="bottom-screen-level-1">
+				<section style=" height:500px;
+	            display: flex;
+	            justify-content: center;
+	            align-items: center;
+	            flex-direction: row;  ">
+					<form action="javascript:void(0);" id="hodForm" method="get"
+						style="border:5px solid #ccc;width: 50%; padding: 15px;">
+						<center>
+							<h1>+ Add New Hod</h1>
+						</center>
+						<input type="hidden" name="id" class="span11" value="-1" />
+						<div class="inputs">
+							<hr>
+							<label for="name"><b>Name</b></label><br>
+							<input type="text" placeholder="Enter Name" name="name" required>
+							<hr>
+							<label for="email"><b>Email</b></label><br>
+							<input type="email" placeholder="Enter Email" name="email" required>
+							<hr>
+							<label for="username"><b>Username</b></label><br>
+							<input type="text" placeholder="Enter Username" name="username" required>
+							<hr>
+							<label for="password"><b>Password</b></label><br>
+							<input type="password" placeholder="Enter Password" name="password" required>
+							<hr>
+							<label for="department"><b>Department</b></label><br>
+							<input type="text" placeholder="Enter Department" name="department" required>
+						</div>
+						<div>
+							<button onclick="addHod()" id="hodFormButton"> Add </button>
+							<button onclick='javascript:window.location.href="#"'>Cancel</button>
+						</div>
+					</form>
+				</section>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<!-- Form Starts Here -->
+
+
+	<!-- form Ends Here -->
+
+
+	</div>
+	
+	<input type="hidden" th:value="${courseId}" id="courseId">
+<input type="hidden" th:value="${adminId}" id="adminId">
+
+	<script src="PageFunctionality/CourseDashboard.js"></script>
+	<script src="javascript/path.js"></script>
+	<!--end-Footer-part-->
+
+</body>
+
+</html>

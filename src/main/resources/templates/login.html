@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Apni Attendance</title>
+
+
+	<style>
+		input[type=text],
+		input[type=password] {
+			width: 100%;
+			padding: 15x;
+			margin: 5px 0 22px 0;
+			display: inline-block;
+			border-style: groove;
+		}
+
+		input[type=text]:focus,
+		input[type=password]:focus {
+			background-color: #ddd;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<div style=" height:500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;">
+		<form style="border:1px solid #ccc; padding: 5%;width:70%; max-width:400px; "  id="loginform" action="javascript:void(0);">
+			<center>
+			<p id="msg"></p>
+				<h1>Login</h1>
+			</center>
+			<div class="inputs">
+				<hr>
+				<label for="username"><b>Username</b></label><br>
+				<input type="text" placeholder="Enter Username" name="username" >
+				<hr>
+				<label for="password"><b>Password</b></label><br>
+				<input type="password" placeholder="Enter Password" name="password" >
+				<hr>
+			</div>
+			<diACv>
+				<button type="reset">Cancel</button>
+				<button onclick="checkCredentials()">Log In</button>
+			</div>
+		</form>
+	</div>
+
+
+	<script src="/javascript/path.js"></script>
+	<script src="/PageFunctionality/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Department Faculties</title>
+</head>
+
+<body onload="onLoadPopulate()">
+	<table>
+		<thead>
+			<tr>
+				<th class="head0">Sr no.</th>
+				<th class="head0">Class Course</th>
+				<th class="head0">Class Branch</th>
+				<th class="head0">Class Section</th>
+				<th class="head0">Class Year</th>
+			</tr>
+		</thead>
+		<tbody id="subject">
+		</tbody>
+	</table>
+<input type="hidden" th:value="${departmentId}" id="departmentId"/>
+<script src="javascript/path.js"></script> 
+	<script src="javascript/DepartmentClasses.js"></script>
+</body>
+
+</html>
